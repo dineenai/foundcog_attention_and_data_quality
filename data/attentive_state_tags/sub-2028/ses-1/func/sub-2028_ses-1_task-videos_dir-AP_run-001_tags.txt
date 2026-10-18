@@ -1,0 +1,5 @@
+Eyes_closed_awake		146.6	212.19	65.59	
+Interest_scanning		2.683	145.557	142.874	
+Object_in_mouth		0.0	212.19	212.19	
+Upset		145.943	212.19	66.247	
+Vocalising		145.7	212.19	66.49	

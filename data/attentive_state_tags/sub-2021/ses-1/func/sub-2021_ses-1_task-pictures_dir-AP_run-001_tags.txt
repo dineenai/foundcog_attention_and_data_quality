@@ -1,0 +1,7 @@
+Baby_out		98.493	99.963	1.47	
+Eyes_closed_awake		18.08	23.863	5.783	
+Interest_scanning		9.787	18.176	8.389	
+Upset		0.0	9.903	9.903	
+Upset		11.753	98.509	86.756	
+Vocalising		0.0	9.903	9.903	
+Vocalising		11.699	98.384	86.685	

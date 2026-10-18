@@ -1,0 +1,7 @@
+Interest_scanning		11.697	53.76	42.063	
+Interest_scanning		54.9	123.662	68.762	
+Interest_scanning		123.662	285.52	161.858	
+Upset		0.0	11.694	11.694	
+Vocalising		0.0	10.269	10.269	
+Looking_away_internal		53.76	54.9	1.14	
+Looking_away_internal		285.52	287.937	2.417	

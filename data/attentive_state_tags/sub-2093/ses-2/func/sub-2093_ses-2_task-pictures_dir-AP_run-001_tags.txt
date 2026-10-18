@@ -1,0 +1,4 @@
+Asleep		294.462	300.384	5.922	
+Interest_scanning		5.688	240.271	234.583	
+Sleepy		255.3	294.495	39.195	
+Vocalising		0.0	3.427	3.427	

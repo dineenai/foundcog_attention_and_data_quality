@@ -1,0 +1,5 @@
+Eyes_closed_awake		0.0	5.233	5.233	
+Eyes_closed_awake		15.277	16.351	1.074	
+Eyes_closed_awake		23.78	26.55	2.77	
+Upset		0.0	39.652	39.652	
+Vocalising		0.0	39.652	39.652	

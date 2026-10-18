@@ -1,0 +1,6 @@
+Interest_scanning		7.132	126.0	118.868	
+Interest_scanning		131.513	160.0	28.487	
+Interest_scanning		178.471	196.0	17.529	
+Interest_scanning		211.526	231.013	19.487	
+Sleepy		196.693	200.2	3.507	
+Upset		245.013	253.006	7.993	

@@ -1,0 +1,5 @@
+Adult_hand		224.073	229.651	5.578	
+Interest_scanning		2.404	222.0	219.596	
+Interest_scanning		222.0	222.901	0.901	
+Interest_scanning		233.094	302.61	69.516	
+Looking_away_internal		0.0	2.003	2.003	

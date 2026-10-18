@@ -1,0 +1,3 @@
+Interest_scanning		3.052	302.572	299.52	
+Object_in_mouth		0.0	302.572	302.572	
+Looking_away_internal		0.0	1.54	1.54	

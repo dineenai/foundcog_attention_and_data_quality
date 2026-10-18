@@ -1,0 +1,5 @@
+Interest_scanning		0.0	284.732	284.732	
+Vocalising		130.967	134.209	3.242	
+Vocalising		135.052	142.909	7.857	
+Vocalising		157.892	161.744	3.852	
+Vocalising		233.521	237.473	3.952	

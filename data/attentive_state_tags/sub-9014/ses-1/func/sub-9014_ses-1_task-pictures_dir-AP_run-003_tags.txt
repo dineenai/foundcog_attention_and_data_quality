@@ -1,0 +1,7 @@
+Object_in_mouth		0.0	39.002	39.002	
+Upset		0.0	28.966	28.966	
+Upset		34.291	39.002	4.711	
+Vocalising		0.0	5.171	5.171	
+Vocalising		9.334	12.905	3.571	
+Vocalising		14.439	28.265	13.826	
+Vocalising		34.356	39.002	4.646	

@@ -1,0 +1,5 @@
+Eyes_blocked		48.586	56.137	7.551	
+Upset		0.0	26.0	26.0	
+Upset		32.744	56.12	23.376	
+Vocalising		0.0	26.0	26.0	
+Vocalising		32.747	56.12	23.373	

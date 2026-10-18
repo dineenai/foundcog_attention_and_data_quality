@@ -1,0 +1,5 @@
+Adult_hand		0.0	4.298	4.298	
+Adult_hand		148.071	153.17	5.099	
+Interest_scanning		0.0	298.156	298.156	
+Object_in_mouth		1.8	146.09	144.29	
+Object_in_mouth		149.572	298.156	148.584	

@@ -1,0 +1,26 @@
+{
+  "run_name": {
+    "Description": "Run, named as in OpenNeuro ds006883 (sub-2xxx = 2 months, sub-9xxx = 9 months); add _events.tsv for the run's events file."
+  },
+  "start_precision": {
+    "Description": "Precision with which the start of the video is aligned to the run: 'millisecond' (recording started automatically in sync with the scan) or 'second' (recording started and cropped manually; alignment good to about 1 s)."
+  },
+  "video_onset_s": {
+    "Description": "Time in seconds, on the clock of the run's events.tsv (onset 0), at which tag time 0 occurs. Add this to tag times to align them with events. Given to the millisecond; how well the camera and scanner clocks agree is given by start_precision (to within about 1 s for 'second'). Negative values: with 'second' precision, the run start is only known to within a 1 s window, so videos covering the start of the run were cropped 1 s early to be sure of including it. The value given (about -1) is nominal: the run actually began somewhere in roughly the first second of the video, so the true offset lies between about -1 and 0. Values near +0.73: with 'millisecond' precision, videos were cropped to begin at the first attention getter, about 0.73 s into the run. Larger positive values: the recording began after the run started (recording_starts_late = 1)."
+  },
+  "recording_starts_late": {
+    "Description": "1 if the video starts after the run began (camera crash or manual delay), so the start of the run is not tagged."
+  },
+  "recording_ends_early": {
+    "Description": "1 if the video stops before the run ended (camera crash or early termination), so the end of the run is not tagged."
+  },
+  "complete_recording": {
+    "Description": "1 if the video covers the whole run, however long the run was (recording_starts_late and recording_ends_early are both 0)."
+  },
+  "run_duration_s": {
+    "Description": "Duration of the fMRI run in seconds, from onset 0 of events.tsv to the end of the run. Runs stopped early are short but can still be completely recorded."
+  },
+  "video_duration_s": {
+    "Description": "Duration in seconds of the cropped video that was tagged (not the original camera recording)."
+  }
+}

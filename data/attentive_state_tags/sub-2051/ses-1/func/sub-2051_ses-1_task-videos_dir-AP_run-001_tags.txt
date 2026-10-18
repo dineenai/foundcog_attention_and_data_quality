@@ -1,0 +1,4 @@
+Upset		269.88	286.587	16.707	
+Vocalising		269.638	286.587	16.949	
+Looking_away_internal		0.0	2.663	2.663	
+Looking_away_internal		3.798	268.4	264.602	

@@ -1,0 +1,4 @@
+Asleep		181.133	221.488	40.355	
+Interest_scanning		0.0	156.613	156.613	
+Object_in_mouth		0.0	221.488	221.488	
+Sleepy		156.997	180.948	23.951	

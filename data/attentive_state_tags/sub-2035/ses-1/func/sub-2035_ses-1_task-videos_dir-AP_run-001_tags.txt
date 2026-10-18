@@ -1,0 +1,3 @@
+Asleep		9.725	94.869	85.144	
+Interest_scanning		4.042	8.362	4.32	
+Looking_away_camera		0.0	3.237	3.237	

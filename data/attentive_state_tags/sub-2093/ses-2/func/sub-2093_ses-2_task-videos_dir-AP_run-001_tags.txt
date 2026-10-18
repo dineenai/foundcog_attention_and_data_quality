@@ -1,0 +1,4 @@
+Eyes_closed_awake		0.0	6.373	6.373	
+Interest_scanning		10.49	39.43	28.94	
+Upset		0.0	8.425	8.425	
+Vocalising		0.0	7.083	7.083	

@@ -1,0 +1,5 @@
+Asleep		4.03	18.5	14.47	
+Asleep		22.01	45.16	23.15	
+Object_in_mouth		0.0	45.16	45.16	
+Sleepy		0.0	4.03	4.03	
+Sleepy		18.5	22.01	3.51	

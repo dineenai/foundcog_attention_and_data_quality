@@ -1,0 +1,2 @@
+Interest_scanning		8.964	303.189	294.225	
+Looking_away_internal		0.0	4.87	4.87	

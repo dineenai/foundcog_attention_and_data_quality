@@ -1,0 +1,4 @@
+Interest_scanning		4.747	102.251	97.504	
+Interest_scanning		109.665	284.372	174.707	
+Looking_away_internal		102.748	109.114	6.366	
+Looking_away_camera		0.0	3.853	3.853	

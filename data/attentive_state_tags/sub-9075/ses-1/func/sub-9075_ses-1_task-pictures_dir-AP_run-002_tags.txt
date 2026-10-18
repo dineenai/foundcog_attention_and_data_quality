@@ -1,0 +1,5 @@
+Eyes_closed_awake		13.332	21.999	8.667	
+Eyes_closed_awake		24.481	27.449	2.968	
+Interest_scanning		2.013	10.106	8.093	
+Object_in_mouth		0.0	27.54	27.54	
+Upset		10.106	27.447	17.341	

@@ -1,0 +1,5 @@
+Asleep		145.92	209.674	63.754	
+Interest_scanning		13.556	126.84	113.284	
+Sleepy		127.192	130.013	2.821	
+Sleepy		130.088	145.912	15.824	
+Looking_away_foreignobject		0.0	1.753	1.753	

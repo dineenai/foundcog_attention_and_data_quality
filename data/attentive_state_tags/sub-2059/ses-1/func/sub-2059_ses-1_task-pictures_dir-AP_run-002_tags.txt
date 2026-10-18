@@ -1,0 +1,2 @@
+Interest_scanning		0.0	299.102	299.102	
+Object_in_mouth		0.0	299.102	299.102	

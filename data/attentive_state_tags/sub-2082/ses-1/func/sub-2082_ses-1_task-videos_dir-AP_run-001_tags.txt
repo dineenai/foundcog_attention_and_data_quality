@@ -1,0 +1,7 @@
+Adult_hand		31.9	35.5	3.6	
+Interest_scanning		1.0	58.92	57.92	
+Interest_scanning		68.52	69.587	1.067	
+Object_in_mouth		0.0	22.02	22.02	
+Object_in_mouth		33.01	69.587	36.577	
+Looking_away_internal		0.0	1.0	1.0	
+Looking_away_internal		58.92	68.52	9.6	

@@ -1,0 +1,7 @@
+Eyes_closed_awake		1.252	9.769	8.517	
+Eyes_closed_awake		14.135	19.11	4.975	
+Eyes_closed_awake		27.198	35.894	8.696	
+Eyes_closed_awake		41.441	55.613	14.172	
+Object_in_mouth		0.0	58.333	58.333	
+Upset		0.0	55.291	55.291	
+Vocalising		0.0	55.434	55.434	

@@ -1,0 +1,4 @@
+Asleep		96.581	151.416	54.835	
+Eyes_closed_awake		0.0	1.116	1.116	
+Interest_scanning		1.771	90.452	88.681	
+Sleepy		91.839	96.396	4.557	

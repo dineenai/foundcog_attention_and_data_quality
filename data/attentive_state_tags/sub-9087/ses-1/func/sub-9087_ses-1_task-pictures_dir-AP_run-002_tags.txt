@@ -1,0 +1,4 @@
+Baby_out		26.61	35.14	8.53	
+Object_in_mouth		0.0	26.39	26.39	
+Upset		0.0	26.6	26.6	
+Vocalising		0.0	26.6	26.6	

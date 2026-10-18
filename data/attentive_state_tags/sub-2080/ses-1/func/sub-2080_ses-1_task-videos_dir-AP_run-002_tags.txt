@@ -1,0 +1,6 @@
+Asleep		203.01	209.046	6.036	
+Interest_scanning		10.284	35.013	24.729	
+Interest_scanning		74.5	96.006	21.506	
+Sleepy		0.0	5.859	5.859	
+Sleepy		35.344	74.5	39.156	
+Sleepy		96.006	203.011	107.005	 

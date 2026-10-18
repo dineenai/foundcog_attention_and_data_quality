@@ -1,0 +1,3 @@
+Baby_out		32.299	36.525	4.226	
+Interest_scanning		1.44	32.299	30.859	
+Looking_away_internal		0.0	1.352	1.352	

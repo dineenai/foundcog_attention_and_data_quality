@@ -1,0 +1,5 @@
+Adult_hand		186.391	189.97	3.579	
+Interest_scanning		0.0	299.386	299.386	
+Object_in_mouth		0.0	155.527	155.527	
+Object_in_mouth		187.073	269.338	82.265	
+Vocalising		182.705	186.925	4.22	

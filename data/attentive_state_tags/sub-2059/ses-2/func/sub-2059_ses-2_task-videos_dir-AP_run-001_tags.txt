@@ -1,0 +1,7 @@
+Interest_scanning		6.312	285.592	279.28	
+Object_in_mouth		8.253	84.913	76.66	
+Object_in_mouth		277.028	284.613	7.585	
+Vocalising		192.641	196.299	3.658	
+Vocalising		213.806	220.039	6.233	
+Vocalising		234.479	239.722	5.243	
+Vocalising		262.396	266.503	4.107	
