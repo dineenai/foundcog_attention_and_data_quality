@@ -82,12 +82,10 @@ Infants' attentive state was coded from the in-scanner video recordings in ELAN.
      media/attentive_state_examples/ keep the clips in the repository and its Zenodo archive. -->
 
 **Interested** (`interest_scanning`)
-
-<!-- TODO: drag interested.mp4 onto this line -->
+https://github.com/user-attachments/assets/9525a8b1-9cfa-4f15-948c-07bc5d7f9dd3
 
 **Sleepy** (`sleepy`)
-
-<!-- TODO: drag sleepy.mp4 onto this line -->
+https://github.com/user-attachments/assets/429d7279-ac34-41cf-abfa-59ebe723ad7e
 
 Shared with the caregivers' permission. © 2026 Cusack Lab, CC BY-NC-ND 4.0 (see [media/LICENSE](media/LICENSE)).
 
