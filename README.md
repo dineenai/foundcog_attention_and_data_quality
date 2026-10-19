@@ -75,17 +75,21 @@ Infants' attentive state was coded from the in-scanner video recordings in ELAN.
 - Participant IDs: `sub-2xxx` for infants scanned at 2 months, `sub-9xxx` for infants scanned at 9 months.
 - Tags: interest_scanning, interest_enjoyment, upset, sleepy, asleep, eyes_closed_awake, vocalising, looking_away_internal, looking_away_camera, looking_away_foreignobject, eyes_blocked, adult_hand, object_in_mouth, baby_out. Definitions are in Table 1 of the paper. <!-- TODO: add codebook -->
 
+
+
 #### Examples
 
-<!-- Video players: on GitHub, edit this README in the browser and drag each MP4 into the editor at the
-     line below; GitHub replaces it with a user-attachments link that plays inline. The copies in
-     media/attentive_state_examples/ keep the clips in the repository and its Zenodo archive. -->
+<table>
+  <tr>
+    <th>Interested 2-month-old</th>
+    <th>Sleepy 2-month-old falls asleep</th>
+  </tr>
+  <tr>
+    <td><video src="https://github.com/user-attachments/assets/2709f15e-2500-440b-beb6-133f553ab7ee" width="360" controls></video></td>
+    <td><video src="https://github.com/user-attachments/assets/429d7279-ac34-41cf-abfa-59ebe723ad7e" width="360" controls></video></td>
+  </tr>
+</table>
 
-**Interested** (`interest_scanning`)
-https://github.com/user-attachments/assets/9525a8b1-9cfa-4f15-948c-07bc5d7f9dd3
-
-**Sleepy** (`sleepy`)
-https://github.com/user-attachments/assets/429d7279-ac34-41cf-abfa-59ebe723ad7e
 
 Shared with the caregivers' permission. © 2026 Cusack Lab, CC BY-NC-ND 4.0 (see [media/LICENSE](media/LICENSE)).
 
