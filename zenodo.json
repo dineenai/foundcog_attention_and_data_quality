@@ -1,0 +1,113 @@
+{
+  "title": "FOUNDCOG attention and data quality: code and attentive-state tags accompanying \"Awake Infant Functional MRI For Visual Neuroscience: Reflections from the Foundations of Cognition Project\"",
+  "upload_type": "software",
+  "description": "<p>Code and anonymised attentive-state tags (ELAN) from the FOUNDCOG project, reproducing the head-motion figures (Figure 3D–F, Supplementary Figure 4) and attentive-state figures (Figure 5 B–F) of Dineen et al. (2026), Frontiers in Neuroscience. Motion analyses use framewise displacement from OpenNeuro ds006883. Code and outputs: BSD 3-Clause; tags and run metadata: CC BY 4.0; example videos: CC BY-NC-ND 4.0.</p>",
+  "creators": [
+    {
+      "name": "Dineen, Áine Travers",
+      "affiliation": "Trinity College Dublin",
+      "orcid": "0000-0002-4218-5192"
+    },
+    {
+      "name": "O'Doherty, Cliona"
+    },
+    {
+      "name": "Truzzi, Anna"
+    },
+    {
+      "name": "King, Graham"
+    },
+    {
+      "name": "Zaadnoordijk, Lorijn"
+    },
+    {
+      "name": "D'Arcy, Enna-Louise"
+    },
+    {
+      "name": "Caldinelli, Chiara"
+    },
+    {
+      "name": "Kravchenko, Anna"
+    },
+    {
+      "name": "Holloway, Tamrin"
+    },
+    {
+      "name": "White, Jessica"
+    },
+    {
+      "name": "Wade, Alex R."
+    },
+    {
+      "name": "De Burca, Aoibhe"
+    },
+    {
+      "name": "Healy, Maebh"
+    },
+    {
+      "name": "Burke, Amy"
+    },
+    {
+      "name": "Campion, Kevin"
+    },
+    {
+      "name": "Murphy, Cameron"
+    },
+    {
+      "name": "Herbert, Katie"
+    },
+    {
+      "name": "Ambre, Claire"
+    },
+    {
+      "name": "Wadhwa, Anisha"
+    },
+    {
+      "name": "Markey, Oscar"
+    },
+    {
+      "name": "Rico-Picó, Josué"
+    },
+    {
+      "name": "O'Hara, Deirdre"
+    },
+    {
+      "name": "Byrne, Angela T."
+    },
+    {
+      "name": "Tarrant, Ailbhe"
+    },
+    {
+      "name": "Foran, Adrienne"
+    },
+    {
+      "name": "Molloy, Eleanor J."
+    },
+    {
+      "name": "Cusack, Rhodri"
+    }
+  ],
+  "license": "bsd-3-clause",
+  "keywords": [
+    "infant fMRI",
+    "awake infants",
+    "head motion",
+    "attentive state",
+    "FOUNDCOG",
+    "visual neuroscience"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.3389/fnins.2026.1852835",
+      "relation": "isSupplementTo",
+      "scheme": "doi",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.18112/openneuro.ds006883.v1.0.1",
+      "relation": "references",
+      "scheme": "doi",
+      "resource_type": "dataset"
+    }
+  ]
+}

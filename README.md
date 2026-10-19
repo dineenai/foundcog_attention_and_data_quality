@@ -145,7 +145,7 @@ python code/attentive_state/03_figure5.py              # Figure 5 B-F and statis
 
 The published figure also includes NICU infants and infants whose caregivers did not consent to sharing. Results from the shared tags therefore differ somewhat from the paper.
 
-## Coming in the next release
+## To be added in the next release
 
 - Noise ceiling analysis (Figure 4)
 - Efficiency of the animacy contrast with respect to run length (Supplementary Figures 7 and 8)
