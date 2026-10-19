@@ -89,7 +89,7 @@ Infants' attentive state was coded from the in-scanner video recordings in ELAN.
 
 <!-- TODO: drag sleepy.mp4 onto this line -->
 
-Shared with the caregivers' permission.
+Shared with the caregivers' permission. © 2026 Cusack Lab, CC BY-NC-ND 4.0 (see [media/LICENSE](media/LICENSE)).
 
 `tag_run_metadata.tsv` gives, for each tagged run:
 
@@ -132,6 +132,12 @@ The published figure also includes NICU infants and infants whose caregivers did
 
 To follow.
 
-## Licence and citation
+## Licence
 
-<!-- TODO: licence; Zenodo DOI for this repository -->
+- Code and outputs: BSD 3-Clause License, as for the FOUNDCOG paradigm. See [LICENSE](LICENSE).
+- Attentive-state tags and run metadata in `data/`: CC BY 4.0, © 2026 Cusack Lab. See [data/LICENSE](data/LICENSE). Please cite the paper above when using them.
+- Images and videos in `media/`: CC BY-NC-ND 4.0, © 2026 Cusack Lab. See [media/LICENSE](media/LICENSE). Credit as: "[filename]" by Cusack Lab, © 2026, licensed under CC BY-NC-ND 4.0.
+
+## Citation
+
+If you use the code or tags, please cite the paper above. <!-- TODO: Zenodo DOI for this repository -->
