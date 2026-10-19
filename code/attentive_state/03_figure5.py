@@ -26,9 +26,8 @@ Panels
      (stars show uncorrected Wilcoxon p < .05 / .01 / .001).
   F  as E, 9 months.
 
-Exclusions are read from code/attentive_state/exclusions.tsv (participant_id, applies_to, reason):
-applies_to = 'all' removes the infant from every panel; 'run_comparison'
-removes them from panels E-F only.
+Optionally, --exclusions FILE (participant_id, applies_to, reason) removes further
+infants: applies_to = 'all' from every panel, 'run_comparison' from E-F only.
 
 Outputs in outputs/attentive_state/figure5_sharable_runs/ (or --out): one PNG per panel, and for each panel the run and
 infant counts, median/IQR per group and category, and the test results.
@@ -92,7 +91,7 @@ def load_runs(counts_path, exclusions_path):
     df["ses_task_run"] = ("S" + df["session"].str.replace("ses-", "") + "_" + df["task"] + "_R"
                           + df["run"].astype(int).astype(str))
 
-    excl = pd.read_csv(exclusions_path, sep="\t", comment="#") if exclusions_path.exists() else \
+    excl = pd.read_csv(exclusions_path, sep="\t", comment="#") if exclusions_path else \
         pd.DataFrame(columns=["participant_id", "applies_to", "reason"])
     bad = set(excl["applies_to"]) - {"all", "run_comparison"}
     if bad:
@@ -296,7 +295,7 @@ def save_stats(df, path):
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--counts", default=OUT / "tag_counts_per_run.tsv", type=Path)
-    ap.add_argument("--exclusions", default=HERE / "exclusions.tsv", type=Path)
+    ap.add_argument("--exclusions", type=Path, help="optional TSV of further infants to exclude (see above)")
     ap.add_argument("--out", default=OUT / "figure5_sharable_runs", type=Path)
     ap.add_argument("--precise", action="store_true", help="write statistics without rounding")
     a = ap.parse_args()

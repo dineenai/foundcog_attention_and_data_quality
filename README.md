@@ -22,12 +22,12 @@ Code and attentive-state tags accompanying:
 
 </details>
 
-The code reproduces the figures on head motion (Figure 3D–F, Supplementary Figure 4) and attentive state (Figure 5 B–F), and the noise ceiling analysis (to follow). It can be run on the data shared here and on OpenNeuro. Each figure is also provided as reported in the paper, computed on the full cohort (group-level results only).
+The code reproduces the figures on head motion (Figure 3D–F, Supplementary Figure 4) and attentive state (Figure 5 B–F). It can be run on the data shared here and on OpenNeuro. Each figure is also provided as reported in the paper, computed on the full cohort (group-level results only).
 
 ```
 code/
   motion/            01_figure3D.py, 02_figure3EF_S4.py
-  attentive_state/   01_tags_to_timeseries.py, 02_count_tags.py, 03_figure5.py, exclusions.tsv
+  attentive_state/   01_tags_to_timeseries.py, 02_count_tags.py, 03_figure5.py
 data/
   attentive_state_tags/   tag files and tag_run_metadata.tsv
 outputs/
@@ -90,8 +90,8 @@ python code/motion/02_figure3EF_S4.py --bids-dir /path/to/ds006883
 
 Infants' attentive state was coded from the in-scanner video recordings in ELAN. The tags are shared in `data/attentive_state_tags/`: 413 tag files from 112 infants, one per tagged run, for infants whose caregivers consented to data sharing.
 
-- Files: `sub-<ID>/ses-<N>/func/sub-<ID>_ses-<N>_task-<task>_dir-<dir>_run-<NNN>_tags.txt`. Each file is an ELAN tab-delimited export with one row per tagged interval: tag name, start, end and duration (s), relative to the start of the stimulus video.
-- Participant IDs: `sub-2xxx` for infants scanned at 2 months, `sub-9xxx` for infants scanned at 9 months.
+- Files: `sub-<ID>/ses-<N>/func/sub-<ID>_ses-<N>_task-<task>_dir-<dir>_run-<NNN>_tags.txt`. Each file is an ELAN tab-delimited export with one row per tagged interval: tag name, start, end and duration (s), relative to the start of the tagged (cropped) camera video. Add `video_onset_s` from `tag_run_metadata.tsv` to align tag times with the run's `events.tsv` on OpenNeuro.
+- Participant IDs: `sub-2xxx` for infants scanned at 2 months, `sub-9xxx` for infants scanned at 9 months. Run names match OpenNeuro ds006883.
 - Tags: interest_scanning, interest_enjoyment, upset, sleepy, asleep, eyes_closed_awake, vocalising, looking_away_internal, looking_away_camera, looking_away_foreignobject, eyes_blocked, adult_hand, object_in_mouth, baby_out. Definitions are in Table 1 of the paper. <!-- TODO: add codebook -->
 
 #### Examples
@@ -115,12 +115,12 @@ Shared with the caregivers' permission. © 2026 Cusack Lab, CC BY-NC-ND 4.0 (see
 | Column | Meaning |
 |---|---|
 | `run_name` | run, as in the tag file name |
-| `start_precision` | precision of the recorded run start time (`millisecond` or `second`) |
-| `video_onset_s` | onset of the stimulus video in the recording (s) |
+| `start_precision` | how precisely the video is aligned to the run: `millisecond` (recording started automatically with the scan) or `second` (started and cropped manually; to about 1 s) |
+| `video_onset_s` | time (s) in the run's `events.tsv` at which tag time 0 occurs; add it to tag times to align them with the run |
 | `recording_starts_late`, `recording_ends_early` | the recording misses the start or end of the run |
 | `complete_recording` | the recording covers the whole run |
 | `run_duration_s` | duration of the run (s) |
-| `video_duration_s` | duration of the tagged video (s) |
+| `video_duration_s` | duration of the tagged (cropped) video (s) |
 
 ### Analysis
 
@@ -138,23 +138,26 @@ python code/attentive_state/03_figure5.py              # Figure 5 B-F and statis
    - Panels B–D use linear models with standard errors clustered by infant, with Benjamini–Hochberg correction across states.
    - Panels E–F compare the first videos, first pictures and second videos run of session 1, in infants who had all three. They use a Friedman test, then Wilcoxon signed-rank tests (uncorrected).
 
-   Infants excluded from all panels, or only from the run comparison, are listed in `code/attentive_state/exclusions.tsv`.
-
 | Folder | Data |
 |---|---|
 | `outputs/attentive_state/figure5_sharable_runs/` | the tags shared here |
-| `outputs/attentive_state/figure5_full_cohort/` | all infants in the paper, as published (group-level results only) |
+| `outputs/attentive_state/figure5_full_cohort/` | all infants in the paper (group-level results only) |
 
 The published figure also includes NICU infants and infants whose caregivers did not consent to sharing. Results from the shared tags therefore differ somewhat from the paper.
 
-## Noise ceiling
+## Coming in the next release
 
-To follow.
+- Noise ceiling analysis (Figure 4)
+- Efficiency of the animacy contrast with respect to run length (Supplementary Figures 7 and 8)
+
+## Contact
+
+Questions or enquiries: [dineenai@tcd.ie](mailto:dineenai@tcd.ie)
 
 ## Licence
 
 - Code and outputs: BSD 3-Clause License, as for the FOUNDCOG paradigm. See [LICENSE](LICENSE).
-- Attentive-state tags and run metadata in `data/`: CC BY 4.0, © 2026 Cusack Lab. See [data/LICENSE](data/LICENSE). Please cite the paper above when using them.
+- Attentive-state tags and run metadata in `data/attentive_state_tags/`: CC BY 4.0, © 2026 Cusack Lab. See [data/attentive_state_tags/LICENSE](data/attentive_state_tags/LICENSE). Please cite the paper above when using them.
 - Images and videos in `media/`: CC BY-NC-ND 4.0, © 2026 Cusack Lab. See [media/LICENSE](media/LICENSE). Credit as: "[filename]" by Cusack Lab, © 2026, licensed under CC BY-NC-ND 4.0.
 
 ## Citation
