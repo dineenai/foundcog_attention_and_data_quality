@@ -1,0 +1,13 @@
+Tag	Comparison	n_infants	p_friedman	p_wilcoxon
+Interested	S1_Pictures_R1 vs S1_Videos_R1	51	0.004549	2.879e-05
+Interested	S1_Pictures_R1 vs S1_Videos_R2	51	0.004549	0.4894
+Interested	S1_Videos_R1 vs S1_Videos_R2	51	0.004549	0.02101
+Fussing	S1_Pictures_R1 vs S1_Videos_R1	51	0.05709	0.02549
+Fussing	S1_Pictures_R1 vs S1_Videos_R2	51	0.05709	0.01443
+Fussing	S1_Videos_R1 vs S1_Videos_R2	51	0.05709	0.5724
+Sleepy	S1_Pictures_R1 vs S1_Videos_R1	51	4.972e-05	0.0009815
+Sleepy	S1_Pictures_R1 vs S1_Videos_R2	51	4.972e-05	0.3778
+Sleepy	S1_Videos_R1 vs S1_Videos_R2	51	4.972e-05	0.0002931
+Asleep	S1_Pictures_R1 vs S1_Videos_R1	51	0.0012	0.01796
+Asleep	S1_Pictures_R1 vs S1_Videos_R2	51	0.0012	0.08794
+Asleep	S1_Videos_R1 vs S1_Videos_R2	51	0.0012	0.002218

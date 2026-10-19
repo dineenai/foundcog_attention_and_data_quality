@@ -1,0 +1,13 @@
+age	Tag	median	q1	q3
+2M	Interested	76.152	45.765	97.88
+9M	Interested	50.787	15.26	83.917
+2M	Fussing	5.689	0.0	30.573
+9M	Fussing	13.492	0.0	54.049
+2M	Sleepy	0.0	0.0	1.264
+9M	Sleepy	0.0	0.0	9.906
+2M	Asleep	0.0	0.0	0.0
+9M	Asleep	0.0	0.0	0.0
+2M	Eyes closed awake	0.0	0.0	8.326
+9M	Eyes closed awake	0.0	0.0	7.599
+2M	Looking away	0.0	0.0	1.056
+9M	Looking away	0.697	0.0	3.826

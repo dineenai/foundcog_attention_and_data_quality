@@ -1,0 +1,7 @@
+Tag	Group1	Group2	coef	p-val	Median_Group1	Median_Group2	Pct_zero_Group1	Pct_zero_Group2	p_corr
+Interested	2M	9M	-21.121	1.791e-06	75.273	48.52	5.7	15.9	1.075e-05
+Fussing	2M	9M	8.176	0.05629	5.882	14.347	38.8	25.4	0.1126
+Sleepy	2M	9M	3.023	0.09093	0.0	0.0	74.8	59.4	0.1364
+Asleep	2M	9M	1.837	0.2005	0.0	0.0	85.1	81.9	0.2276
+Eyes closed awake	2M	9M	-2.044	0.2276	0.0	0.0	54.2	50.7	0.2276
+Looking away	2M	9M	3.502	0.0005885	0.0	1.132	65.6	39.1	0.001765

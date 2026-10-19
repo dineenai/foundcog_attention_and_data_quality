@@ -1,0 +1,7 @@
+Tag	Group1	Group2	coef	p-val	Median_Group1	Median_Group2	Pct_zero_Group1	Pct_zero_Group2	p_corr
+Interested	Pictures	Videos	2.167	0.6453	44.048	50.046	19.0	13.8	0.7744
+Fussing	Pictures	Videos	9.947	0.04573	5.639	15.937	36.2	17.5	0.09145
+Sleepy	Pictures	Videos	-7.167	0.02192	2.209	0.0	46.6	68.8	0.06575
+Asleep	Pictures	Videos	-8.36	0.008649	0.0	0.0	72.4	88.8	0.05189
+Eyes closed awake	Pictures	Videos	0.253	0.8586	0.0	0.771	58.6	45.0	0.8586
+Looking away	Pictures	Videos	2.91	0.07104	0.738	1.343	41.4	37.5	0.1066

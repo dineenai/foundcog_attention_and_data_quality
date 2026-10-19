@@ -1,0 +1,13 @@
+task	Tag	median	q1	q3
+Videos	Interested	54.642	12.275	84.224
+Pictures	Interested	50.333	22.551	80.812
+Videos	Fussing	15.937	1.285	63.452
+Pictures	Fussing	5.98	0.0	31.347
+Videos	Sleepy	0.0	0.0	0.19
+Pictures	Sleepy	0.0	0.0	14.709
+Videos	Asleep	0.0	0.0	0.0
+Pictures	Asleep	0.0	0.0	1.845
+Videos	Eyes closed awake	0.852	0.0	8.715
+Pictures	Eyes closed awake	0.0	0.0	4.389
+Videos	Looking away	1.028	0.0	5.309
+Pictures	Looking away	0.439	0.0	2.055

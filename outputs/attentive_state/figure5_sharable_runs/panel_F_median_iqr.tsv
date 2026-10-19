@@ -1,0 +1,13 @@
+ses_task_run	Tag	median	q1	q3
+S1_Pictures_R1	Interested	59.648	38.723	86.343
+S1_Videos_R1	Interested	69.258	17.019	87.247
+S1_Videos_R2	Interested	51.332	10.891	81.62
+S1_Pictures_R1	Fussing	10.349	0.0	24.044
+S1_Videos_R1	Fussing	12.102	3.086	41.553
+S1_Videos_R2	Fussing	10.085	0.261	38.953
+S1_Pictures_R1	Sleepy	0.0	0.0	10.055
+S1_Videos_R1	Sleepy	0.0	0.0	0.0
+S1_Videos_R2	Sleepy	0.0	0.0	11.918
+S1_Pictures_R1	Asleep	0.0	0.0	0.0
+S1_Videos_R1	Asleep	0.0	0.0	0.0
+S1_Videos_R2	Asleep	0.0	0.0	0.0
