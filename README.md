@@ -22,16 +22,16 @@ Code and attentive-state tags accompanying:
 
 </details>
 
-The code reproduces the figures on head motion (Figure 3D) and attentive state (Figure 5 B–F), and the noise ceiling analysis (to follow). It can be run on the data shared here and on OpenNeuro. Each figure is also provided as reported in the paper, computed on the full cohort (group-level results only).
+The code reproduces the figures on head motion (Figure 3D–F, Supplementary Figure 4) and attentive state (Figure 5 B–F), and the noise ceiling analysis (to follow). It can be run on the data shared here and on OpenNeuro. Each figure is also provided as reported in the paper, computed on the full cohort (group-level results only).
 
 ```
 code/
-  motion/            01_figure3D.py
+  motion/            01_figure3D.py, 02_figure3EF_S4.py
   attentive_state/   01_tags_to_timeseries.py, 02_count_tags.py, 03_figure5.py, exclusions.tsv
 data/
   attentive_state_tags/   tag files and tag_run_metadata.tsv
 outputs/
-  motion/            figure3D_openneuro_v1-0-1/, figure3D_full_cohort/
+  motion/            figure3D_* and figure3EF_S4_* (openneuro_v1-0-1/, full_cohort/)
   attentive_state/   tag time series and counts, figure5_sharable_runs/, figure5_full_cohort/
 ```
 
@@ -65,6 +65,25 @@ Output goes to `outputs/motion/figure3D_openneuro_v<release>/`. The release is t
 | `outputs/motion/figure3D_openneuro_v1-0-1/` | OpenNeuro ds006883 v1.0.1 (pictures runs only) |
 | `outputs/motion/figure3D_full_cohort/` | All infants in the paper (control and NICU), all awake and asleep runs, as published (group-level summary only) |
 
+## Motion thresholds (Figure 3E–F, Supplementary Figure 4)
+
+`code/motion/02_figure3EF_S4.py` shows how the two motion thresholds affect how much awake data is kept. It uses the same FD input and options as `01_figure3D.py`, and awake runs only.
+
+- **Figure 3E–F:** the percentage of frames censored (FD ≥ 1.5 mm) in each run, for videos and pictures runs (3E: 2 months, 3F: 9 months).
+- **Supplementary Figure 4 A–B:** the percentage of runs included as the run inclusion threshold (median FD below the threshold) varies from 0.25 to 3 mm, for videos (A) and pictures (B).
+- **Supplementary Figure 4 C–F:** the percentage of frames censored within the included runs, for each run inclusion threshold and frame censoring threshold (C–D: 2 months, E–F: 9 months; videos, pictures).
+
+The chosen 1.5 mm thresholds are marked. As in the paper, only runs with field maps from the same session are used. The tables `threshold_sensitivity.tsv` and `censoring_per_run.tsv` hold the plotted values.
+
+```bash
+python code/motion/02_figure3EF_S4.py --bids-dir /path/to/ds006883
+```
+
+| Folder | Data |
+|---|---|
+| `outputs/motion/figure3EF_S4_openneuro_v1-0-1/` | OpenNeuro ds006883 v1.0.1 (pictures runs only, so no videos panels) |
+| `outputs/motion/figure3EF_S4_full_cohort/` | All infants in the paper, as published (no run names) |
+
 ## Attentive state (Figure 5 B–F)
 
 ### Tags
@@ -74,8 +93,6 @@ Infants' attentive state was coded from the in-scanner video recordings in ELAN.
 - Files: `sub-<ID>/ses-<N>/func/sub-<ID>_ses-<N>_task-<task>_dir-<dir>_run-<NNN>_tags.txt`. Each file is an ELAN tab-delimited export with one row per tagged interval: tag name, start, end and duration (s), relative to the start of the stimulus video.
 - Participant IDs: `sub-2xxx` for infants scanned at 2 months, `sub-9xxx` for infants scanned at 9 months.
 - Tags: interest_scanning, interest_enjoyment, upset, sleepy, asleep, eyes_closed_awake, vocalising, looking_away_internal, looking_away_camera, looking_away_foreignobject, eyes_blocked, adult_hand, object_in_mouth, baby_out. Definitions are in Table 1 of the paper. <!-- TODO: add codebook -->
-
-
 
 #### Examples
 
