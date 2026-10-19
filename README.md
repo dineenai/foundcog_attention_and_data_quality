@@ -1,5 +1,7 @@
 # FOUNDCOG attention and data quality
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23483994.svg)](https://doi.org/10.5281/zenodo.23483994)
+
 Code and attentive-state tags accompanying:
 
 > Dineen, Á. T., O'Doherty, C., Truzzi, A., King, G., Zaadnoordijk, L., D'Arcy, E.-L., Caldinelli, C., Kravchenko, A., Holloway, T., White, J., Wade, A. R., De Burca, A., Healy, M., Burke, A., Campion, K., Murphy, C., Herbert, K., Ambre, C., Wadhwa, A., Markey, O., Rico-Picó, J., O'Hara, D., Byrne, A. T., Tarrant, A., Foran, A., Molloy, E. J., & Cusack, R. (2026). Awake Infant Functional MRI For Visual Neuroscience: Reflections from the Foundations of Cognition Project. *Frontiers in Neuroscience*.
@@ -162,4 +164,8 @@ Questions or enquiries: [dineenai@tcd.ie](mailto:dineenai@tcd.ie)
 
 ## Citation
 
-If you use the code or tags, please cite the paper above. <!-- TODO: Zenodo DOI for this repository -->
+If you use the code or tags, please cite the paper above and this repository:
+
+> Dineen, Á. T., et al. (2026). FOUNDCOG attention and data quality: code and attentive-state tags (Version 1.0.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.23483994
+
+This DOI always points to the latest release; the DOI for v1.0.0 alone is [10.5281/zenodo.23483995](https://doi.org/10.5281/zenodo.23483995).
