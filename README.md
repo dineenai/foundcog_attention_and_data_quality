@@ -24,7 +24,7 @@ Code and attentive-state tags accompanying:
 
 </details>
 
-The code reproduces the figures on awake scan time and head motion (Figure 3B–F, Supplementary Figure 4) and attentive state (Figure 5 B–F). It can be run on the data shared here and on OpenNeuro. Each figure is also provided as reported in the paper, computed on the full cohort (group-level results only).
+The code reproduces the figures on awake scan time and head motion (Figure 3B–F, Supplementary Figure 4) and attentive state (Figure 5 B–F; Supplementary Figure 10 as figures only). It can be run on the data shared here and on OpenNeuro. Each figure is also provided as reported in the paper, computed on the full cohort (group-level results only).
 
 ```
 code/
@@ -36,7 +36,7 @@ data/
 outputs/
   awake_minutes/     figure3BC_openneuro_v1-0-1/, figure3BC_full_cohort/
   motion/            figure3D_* and figure3EF_S4_* (openneuro_v1-0-1/, full_cohort/)
-  attentive_state/   tag time series and counts, figure5_sharable_runs/, figure5_full_cohort/
+  attentive_state/   tag time series and counts, figure5_sharable_runs/, figure5_full_cohort/, figureS10_full_cohort/
 ```
 
 All scripts are run from the repository root. Requirements: Python 3, numpy, pandas, scipy, statsmodels, matplotlib, seaborn.
@@ -112,7 +112,7 @@ python code/motion/02_figure3EF_S4.py --bids-dir /path/to/ds006883
 
 ### Tags
 
-Infants' attentive state was coded from the in-scanner video recordings in ELAN. The tags are shared in `data/attentive_state_tags/`: 413 tag files from 112 infants, one per tagged run, for infants whose caregivers consented to data sharing.
+Infants' attentive state was coded from the in-scanner video recordings in ELAN. The tags are shared in `data/attentive_state_tags/`: 413 tag files from 112 infants, one per tagged run, for control infants whose caregivers consented to data sharing. Data from NICU infants cannot be shared under the study's ethics approval.
 
 - Files: `sub-<ID>/ses-<N>/func/sub-<ID>_ses-<N>_task-<task>_dir-<dir>_run-<NNN>_tags.txt`. Each file is an ELAN tab-delimited export with one row per tagged interval: tag name, start, end and duration (s), relative to the start of the tagged (cropped) camera video. Add `video_onset_s` from `tag_run_metadata.tsv` to align tag times with the run's `events.tsv` on OpenNeuro.
 - Participant IDs: `sub-2xxx` for infants scanned at 2 months, `sub-9xxx` for infants scanned at 9 months. Run names match OpenNeuro ds006883.
@@ -166,8 +166,9 @@ python code/attentive_state/03_figure5.py              # Figure 5 B-F and statis
 |---|---|
 | `outputs/attentive_state/figure5_sharable_runs/` | the tags shared here |
 | `outputs/attentive_state/figure5_full_cohort/` | all infants in the paper (group-level results only) |
+| `outputs/attentive_state/figureS10_full_cohort/` | Supplementary Figure 10: control vs NICU infants, using the same runs, states and plot style as Figure 5 B–D (figures and group-level tables only). Under the study's ethics approval, data from NICU infants cannot be shared, so this figure cannot be remade from the shared tags |
 
-The published figure also includes NICU infants and infants whose caregivers did not consent to sharing. Results from the shared tags therefore differ somewhat from the paper.
+The published figure also includes NICU infants, whose data cannot be shared under the study's ethics approval, and infants whose caregivers did not consent to sharing. Results from the shared tags therefore differ somewhat from the paper.
 
 ## To be added in the next release
 

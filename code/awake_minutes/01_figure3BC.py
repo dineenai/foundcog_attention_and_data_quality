@@ -53,6 +53,7 @@ from pathlib import Path
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from matplotlib.collections import PolyCollection
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -68,7 +69,9 @@ AGE_COLORS = {"2M": plt.get_cmap("Set2")(0 / 7), "9M": "teal"}
 NINE_MONTH_COLORS = {"data_9M": "teal", "no_data_9M": "lightslategrey", "no_return_9M": "black"}
 TASKS = ["videos", "pictures"]
 TASK_COLORS = {"videos": plt.get_cmap("Blues")(0.6), "pictures": plt.get_cmap("Purples")(0.6)}
-NORM = {"density_norm": "count"} if tuple(map(int, sns.__version__.split(".")[:2])) >= (0, 13) else {"scale": "count"}
+# Violin widths as in the original figures: each violin's peak at full width, then (3C)
+# narrowed within each age in proportion to its number of infants
+NORM = {"density_norm": "width"} if tuple(map(int, sns.__version__.split(".")[:2])) >= (0, 13) else {"scale": "width"}
 
 
 # ---------------------------------------------------------------- data
@@ -124,6 +127,45 @@ def correlation(total):
 
 
 # ---------------------------------------------------------------- plots
+
+def scale_by_count(ax, counts, split, width=0.8):
+    """Violin widths as in the original figures (seaborn < 0.13, scale="count"): each violin
+    is drawn with its peak at full width (density_norm="width"), then narrowed within each x
+    position in proportion to its number of observations. counts: per hue level, in hue
+    order; one list, or one list per x position. Call straight after sns.violinplot."""
+    counts = np.atleast_2d(np.asarray(counts, dtype=float))
+    k = counts.shape[1]
+    factor = counts / counts.max(axis=1, keepdims=True)   # within each x position
+
+    def f(tick, h):
+        return factor[min(tick, len(factor) - 1) if len(factor) > 1 else 0, h]
+
+    def locate(xs):
+        """Hue index and centre line of the violin a shape (or quartile line) belongs to."""
+        mid = (np.min(xs) + np.max(xs)) / 2
+        tick = round(mid)
+        if split:
+            return (0 if mid < tick else 1), tick
+        offsets = -width / 2 + width / k * (np.arange(k) + 0.5)
+        h = int(np.argmin(np.abs(offsets - (mid - tick))))
+        return h, tick + offsets[h]
+
+    for pc in ax.collections:
+        if not isinstance(pc, PolyCollection):
+            continue
+        for path in pc.get_paths():
+            v = path.vertices
+            if len(v) == 0:
+                continue
+            h, c = locate(v[:, 0])
+            v[:, 0] = c + (v[:, 0] - c) * f(int(round(c)), h)
+    for line in ax.lines:
+        x = np.asarray(line.get_xdata(), dtype=float)
+        if len(x) != 2 or x[0] == x[1]:
+            continue  # only the horizontal quartile lines
+        h, c = locate(x)
+        line.set_xdata(c + (x - c) * f(int(round(c)), h))
+
 
 def style(ax, ylabel_step, label_every):
     ax.yaxis.set_major_locator(plt.MultipleLocator(ylabel_step))
@@ -187,6 +229,8 @@ def plot_3c(by_task, path):
     tasks = [t for t in TASKS if t in set(d["task"])]
     sns.violinplot(data=d, x="age", y="minutes", order=AGES, hue="task", hue_order=tasks, palette=TASK_COLORS,
                    split=len(tasks) > 1, linewidth=1.2, cut=0, inner="quart", ax=ax, **NORM)
+    n = d.groupby(["age", "task"]).size()
+    scale_by_count(ax, [[n.get((age, t), 0) for t in tasks] for age in AGES], split=len(tasks) > 1)
     style_violins(ax, 1.5)
     ax.set_ylim(bottom=0)
     handles, labels = ax.get_legend_handles_labels()

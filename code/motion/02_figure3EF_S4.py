@@ -192,7 +192,7 @@ def plot_censoring_violins(per_run, age, tasks, path, rng):
     ax.yaxis.set_minor_locator(plt.MultipleLocator(10))
     ax.yaxis.grid(True, ls="--", which="both", color="darkgrey", alpha=0.7, zorder=0)
     # violin width ~ number of runs (seaborn's density_norm='count'); quartiles inside
-    norm = {"density_norm": "count"} if tuple(map(int, sns.__version__.split(".")[:2])) >= (0, 13) else {"scale": "count"}
+    norm = {"density_norm": "count", "common_norm": True} if tuple(map(int, sns.__version__.split(".")[:2])) >= (0, 13) else {"scale": "count"}
     sns.violinplot(data=d, x="task", y="pct_frames_censored", order=tasks, hue="task", palette=TASK_COLORS,
                    linewidth=0, cut=0, inner="quart", dodge=False, ax=ax, **norm)
     for ln in ax.lines:                      # quartiles dashed ...

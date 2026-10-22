@@ -1,0 +1,61 @@
+age	cohort	task	Tag	median	q1	q3
+2M	control	all	Interested	76.152	45.765	97.88
+2M	control	all	Fussing	5.689	0.0	30.573
+2M	control	all	Sleepy	0.0	0.0	1.264
+2M	control	all	Asleep	0.0	0.0	0.0
+2M	control	all	Looking away	0.0	0.0	1.056
+2M	nicu	all	Interested	75.0	41.73	96.82
+2M	nicu	all	Fussing	6.498	0.0	26.516
+2M	nicu	all	Sleepy	0.0	0.0	0.0
+2M	nicu	all	Asleep	0.0	0.0	0.0
+2M	nicu	all	Looking away	0.0	0.0	0.0
+2M	control	Pictures	Interested	69.231	38.926	96.066
+2M	control	Pictures	Fussing	5.724	0.0	30.833
+2M	control	Pictures	Sleepy	0.0	0.0	6.419
+2M	control	Pictures	Asleep	0.0	0.0	0.0
+2M	control	Pictures	Looking away	0.0	0.0	1.316
+2M	control	Videos	Interested	82.168	52.667	97.902
+2M	control	Videos	Fussing	5.654	0.0	30.035
+2M	control	Videos	Sleepy	0.0	0.0	0.0
+2M	control	Videos	Asleep	0.0	0.0	0.0
+2M	control	Videos	Looking away	0.0	0.0	1.056
+2M	nicu	Videos	Interested	73.832	39.337	96.643
+2M	nicu	Videos	Fussing	5.369	0.0	43.493
+2M	nicu	Videos	Sleepy	0.0	0.0	0.0
+2M	nicu	Videos	Asleep	0.0	0.0	0.0
+2M	nicu	Videos	Looking away	0.0	0.0	0.0
+2M	nicu	Pictures	Interested	75.839	51.738	96.284
+2M	nicu	Pictures	Fussing	7.143	0.993	16.694
+2M	nicu	Pictures	Sleepy	0.0	0.0	0.0
+2M	nicu	Pictures	Asleep	0.0	0.0	0.0
+2M	nicu	Pictures	Looking away	0.0	0.0	0.0
+9M	control	all	Interested	50.787	15.26	83.917
+9M	control	all	Fussing	13.492	0.0	54.049
+9M	control	all	Sleepy	0.0	0.0	9.906
+9M	control	all	Asleep	0.0	0.0	0.0
+9M	control	all	Looking away	0.697	0.0	3.826
+9M	nicu	all	Interested	37.5	13.793	50.99
+9M	nicu	all	Fussing	14.634	1.989	38.365
+9M	nicu	all	Sleepy	8.897	0.0	31.4
+9M	nicu	all	Asleep	0.0	0.0	0.0
+9M	nicu	all	Looking away	2.847	0.998	6.904
+9M	control	Videos	Interested	54.642	12.275	84.224
+9M	control	Videos	Fussing	15.937	1.285	63.452
+9M	control	Videos	Sleepy	0.0	0.0	0.19
+9M	control	Videos	Asleep	0.0	0.0	0.0
+9M	control	Videos	Looking away	1.028	0.0	5.309
+9M	nicu	Videos	Interested	39.102	17.228	53.951
+9M	nicu	Videos	Fussing	15.68	9.777	41.362
+9M	nicu	Videos	Sleepy	3.833	0.0	12.061
+9M	nicu	Videos	Asleep	0.0	0.0	0.0
+9M	nicu	Videos	Looking away	5.391	2.81	13.557
+9M	nicu	Pictures	Interested	30.522	10.184	42.505
+9M	nicu	Pictures	Fussing	2.658	0.0	28.973
+9M	nicu	Pictures	Sleepy	24.101	17.8	44.084
+9M	nicu	Pictures	Asleep	0.0	0.0	10.377
+9M	nicu	Pictures	Looking away	1.639	0.725	3.648
+9M	control	Pictures	Interested	50.333	22.551	80.812
+9M	control	Pictures	Fussing	5.98	0.0	31.347
+9M	control	Pictures	Sleepy	0.0	0.0	14.709
+9M	control	Pictures	Asleep	0.0	0.0	1.845
+9M	control	Pictures	Looking away	0.439	0.0	2.055

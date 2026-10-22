@@ -47,6 +47,7 @@ from pathlib import Path
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from matplotlib.collections import PolyCollection
 from matplotlib.patches import Patch
 import numpy as np
 import pandas as pd
@@ -161,6 +162,45 @@ def median_iqr(long, group_col):
 
 # ---------------------------------------------------------------- plotting
 
+def scale_by_count(ax, counts, split, width=0.8):
+    """Violin widths as in the original figures (seaborn < 0.13, scale="count"): each violin
+    is drawn with its peak at full width (density_norm="width"), then narrowed within each x
+    position in proportion to its number of observations. counts: per hue level, in hue
+    order; one list, or one list per x position. Call straight after sns.violinplot."""
+    counts = np.atleast_2d(np.asarray(counts, dtype=float))
+    k = counts.shape[1]
+    factor = counts / counts.max(axis=1, keepdims=True)   # within each x position
+
+    def f(tick, h):
+        return factor[min(tick, len(factor) - 1) if len(factor) > 1 else 0, h]
+
+    def locate(xs):
+        """Hue index and centre line of the violin a shape (or quartile line) belongs to."""
+        mid = (np.min(xs) + np.max(xs)) / 2
+        tick = round(mid)
+        if split:
+            return (0 if mid < tick else 1), tick
+        offsets = -width / 2 + width / k * (np.arange(k) + 0.5)
+        h = int(np.argmin(np.abs(offsets - (mid - tick))))
+        return h, tick + offsets[h]
+
+    for pc in ax.collections:
+        if not isinstance(pc, PolyCollection):
+            continue
+        for path in pc.get_paths():
+            v = path.vertices
+            if len(v) == 0:
+                continue
+            h, c = locate(v[:, 0])
+            v[:, 0] = c + (v[:, 0] - c) * f(int(round(c)), h)
+    for line in ax.lines:
+        x = np.asarray(line.get_xdata(), dtype=float)
+        if len(x) != 2 or x[0] == x[1]:
+            continue  # only the horizontal quartile lines
+        h, c = locate(x)
+        line.set_xdata(c + (x - c) * f(int(round(c)), h))
+
+
 def style_axes(ax, ylim):
     ax.set_ylim(ylim)
     ax.yaxis.set_minor_locator(plt.MultipleLocator(5))
@@ -177,8 +217,10 @@ def style_axes(ax, ylim):
 def split_violin(long, group_col, hue_order, colors, legend_title, legend_labels, stats, path):
     fig, ax = plt.subplots(figsize=(len(CATS_ALL) + 3, 5))
     sns.violinplot(x="Tag", y="Proportion (%)", hue=group_col, order=CATS_ALL, hue_order=hue_order,
-                   data=long, palette=colors, split=True, inner="quart", cut=0, density_norm="count",
+                   data=long, palette=colors, split=True, inner="quart", cut=0, density_norm="width",
                    legend=False, ax=ax)
+    n_runs = long.drop_duplicates("run_name").groupby(group_col).size()
+    scale_by_count(ax, [n_runs.get(h, 0) for h in hue_order], split=True)
     for i, pc in enumerate(ax.collections):
         pc.set_edgecolor(colors[hue_order[i % 2]])
         pc.set_linewidth(1.5)
