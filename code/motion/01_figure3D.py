@@ -66,7 +66,7 @@ COLORS = {
     ("2M", "all"): lighten(plt.get_cmap("Set2")(0), 0.4),
     ("2M", "included"): plt.get_cmap("Set2")(0),
     ("2M", "asleep"): "lightgray",
-    ("9M", "all"): lighten("teal", 0.1),
+    ("9M", "all"): lighten("teal", 0.4),
     ("9M", "included"): "teal",
     ("9M", "asleep"): "darkgray",
 }
