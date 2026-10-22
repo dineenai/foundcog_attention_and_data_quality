@@ -1,0 +1,15 @@
+age	group	task	n_runs	n_infants	summary_of	median_fd_mm	q1_mm	q3_mm	pct_frames_censored
+2M	All awake	all_tasks	443	99	run medians	0.512	0.249	1.083	20.23
+2M	All awake	pictures	183	89	run medians	0.524	0.249	1.232	21.24
+2M	All awake	videos	260	99	run medians	0.508	0.251	0.98	19.53
+2M	Included awake	all_tasks	397	99	run medians	0.423	0.231	0.857	16.94
+2M	Included awake	pictures	159	85	run medians	0.414	0.23	0.975	17.66
+2M	Included awake	videos	238	99	run medians	0.424	0.233	0.817	16.45
+2M	Asleep	all_tasks	90	82	frames	0.135	0.087	0.196	1.05
+9M	All awake	all_tasks	141	42	run medians	0.385	0.234	0.92	11.15
+9M	All awake	pictures	61	39	run medians	0.321	0.211	0.676	9.14
+9M	All awake	videos	80	42	run medians	0.507	0.271	1.017	12.89
+9M	Included awake	all_tasks	137	42	run medians	0.382	0.23	0.889	10.45
+9M	Included awake	pictures	60	38	run medians	0.314	0.209	0.671	8.34
+9M	Included awake	videos	77	42	run medians	0.487	0.271	0.988	12.26
+9M	Asleep	all_tasks	26	25	frames	0.195	0.124	0.298	0.85

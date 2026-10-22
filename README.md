@@ -24,7 +24,7 @@ Code and attentive-state tags accompanying:
 
 </details>
 
-The code reproduces the figures on awake scan time and head motion (Figure 3B–F, Supplementary Figure 4) and attentive state (Figure 5 B–F; Supplementary Figure 10 as figures only). It can be run on the data shared here and on OpenNeuro. Each figure is also provided as reported in the paper, computed on the full cohort (group-level results only).
+The code reproduces the figures on awake scan time and head motion (Figure 3B–F, Supplementary Figure 4; Supplementary Figure 5 as figures only) and attentive state (Figure 5 B–F; Supplementary Figure 10 as figures only). It can be run on the data shared here and on OpenNeuro. Each figure is also provided as reported in the paper, computed on the full cohort (group-level results only).
 
 ```
 code/
@@ -35,7 +35,7 @@ data/
   attentive_state_tags/   tag files and tag_run_metadata.tsv
 outputs/
   awake_minutes/     figure3BC_openneuro_v1-0-1/, figure3BC_full_cohort/
-  motion/            figure3D_* and figure3EF_S4_* (openneuro_v1-0-1/, full_cohort/)
+  motion/            figure3D_* and figure3EF_S4_* (openneuro_v1-0-1/, full_cohort/), figureS5_full_cohort/
   attentive_state/   tag time series and counts, figure5_sharable_runs/, figure5_full_cohort/, figureS10_full_cohort/
 ```
 
@@ -88,6 +88,7 @@ Output goes to `outputs/motion/figure3D_openneuro_v<release>/`. The release is t
 |---|---|
 | `outputs/motion/figure3D_openneuro_v1-0-1/` | OpenNeuro ds006883 v1.0.1 (pictures runs only) |
 | `outputs/motion/figure3D_full_cohort/` | All infants in the paper (control and NICU), all awake and asleep runs, as published (group-level summary only) |
+| `outputs/motion/figureS5_full_cohort/` | Supplementary Figure 5: the same plot and summary for control and NICU infants separately (figures and group-level tables only). Under the study's ethics approval, data from NICU infants cannot be shared, so this figure cannot be remade from the shared data |
 
 ## Motion thresholds (Figure 3E–F, Supplementary Figure 4)
 
