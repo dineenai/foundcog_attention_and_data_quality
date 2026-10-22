@@ -24,20 +24,42 @@ Code and attentive-state tags accompanying:
 
 </details>
 
-The code reproduces the figures on head motion (Figure 3D–F, Supplementary Figure 4) and attentive state (Figure 5 B–F). It can be run on the data shared here and on OpenNeuro. Each figure is also provided as reported in the paper, computed on the full cohort (group-level results only).
+The code reproduces the figures on awake scan time and head motion (Figure 3B–F, Supplementary Figure 4) and attentive state (Figure 5 B–F). It can be run on the data shared here and on OpenNeuro. Each figure is also provided as reported in the paper, computed on the full cohort (group-level results only).
 
 ```
 code/
+  awake_minutes/     01_figure3BC.py
   motion/            01_figure3D.py, 02_figure3EF_S4.py
   attentive_state/   01_tags_to_timeseries.py, 02_count_tags.py, 03_figure5.py
 data/
   attentive_state_tags/   tag files and tag_run_metadata.tsv
 outputs/
+  awake_minutes/     figure3BC_openneuro_v1-0-1/, figure3BC_full_cohort/
   motion/            figure3D_* and figure3EF_S4_* (openneuro_v1-0-1/, full_cohort/)
   attentive_state/   tag time series and counts, figure5_sharable_runs/, figure5_full_cohort/
 ```
 
 All scripts are run from the repository root. Requirements: Python 3, numpy, pandas, scipy, statsmodels, matplotlib, seaborn.
+
+## Awake scan time (Figure 3B–C)
+
+`code/awake_minutes/01_figure3BC.py` plots the minutes of awake fMRI acquired per infant: the number of volumes in the infant's pictures and videos runs × TR (0.61 s).
+
+- **Figure 3B:** minutes per infant at 2 and 9 months, with each infant's two visits joined: teal, awake data at 9 months; grey, came back at 9 months but no awake data were acquired (0 min); black, no 9-month visit. Violins and summary statistics include infants with awake data only.
+- **Figure 3C:** the same, split by task (videos | pictures).
+
+The script also writes `scan_time_summary.tsv` (infants, total hours, and median and quartiles of minutes per age and task), `scan_time_categories.tsv` (infants per age and category: `data_2M_and_9M`, `no_data_2M_data_9M`, `data_2M_no_data_9M`, `data_2M_no_return_9M`, `no_data_2M_no_return_9M`) and `scan_time_correlation.tsv` (correlation between each infant's minutes at 2 and 9 months).
+
+With `--bids-dir`, the number of volumes in each run is taken from the framewise-displacement files on OpenNeuro (one value per volume after the first). The same infant has the same number at both ages (e.g. sub-2057 and sub-9057). Infants with no awake data are not on OpenNeuro, so the OpenNeuro version has no grey points, and `no_return_9M` there means only that the infant has no 9-month runs on OpenNeuro.
+
+```bash
+python code/awake_minutes/01_figure3BC.py --bids-dir /path/to/ds006883
+```
+
+| Folder | Data |
+|---|---|
+| `outputs/awake_minutes/figure3BC_openneuro_v1-0-1/` | OpenNeuro ds006883 v1.0.1 (pictures runs only) |
+| `outputs/awake_minutes/figure3BC_full_cohort/` | All infants in the paper, as published (group-level results only) |
 
 ## Motion (Figure 3D)
 
@@ -166,6 +188,4 @@ Questions or enquiries: [dineenai@tcd.ie](mailto:dineenai@tcd.ie)
 
 If you use the code or tags, please cite the paper above and this repository:
 
-> Dineen, Á. T., et al. (2026). FOUNDCOG attention and data quality: code and attentive-state tags (Version 1.0.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.23483994
-
-This DOI always points to the latest release; the DOI for v1.0.0 alone is [10.5281/zenodo.23483995](https://doi.org/10.5281/zenodo.23483995).
+> Dineen, Á. T., et al. (2026). FOUNDCOG attention and data quality: code and attentive-state tags [Software]. Zenodo. https://doi.org/10.5281/zenodo.23483994

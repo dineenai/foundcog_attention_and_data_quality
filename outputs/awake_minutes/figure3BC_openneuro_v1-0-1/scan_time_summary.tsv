@@ -1,0 +1,5 @@
+figure	age	task	n_infants	n_infants_with_awake_data	total_hours	median_min	q10_min	q25_min	q75_min
+3B	2M	all_awake	84	84	12.37	8.6	5.11	5.18	10.37
+3B	9M	all_awake	42	42	4.69	5.18	1.59	4.85	10.37
+3C	2M	pictures	84	84	12.37	8.6	5.11	5.18	10.37
+3C	9M	pictures	42	42	4.69	5.18	1.59	4.85	10.37

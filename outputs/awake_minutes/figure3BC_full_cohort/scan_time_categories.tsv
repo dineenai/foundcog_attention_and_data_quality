@@ -1,0 +1,9 @@
+age	category	n_infants
+2M	data_2M_and_9M	64
+2M	data_2M_no_data_9M	39
+2M	data_2M_no_return_9M	27
+2M	no_data_2M_data_9M	1
+2M	no_data_2M_no_return_9M	3
+9M	data_2M_and_9M	64
+9M	data_2M_no_data_9M	39
+9M	no_data_2M_data_9M	1
